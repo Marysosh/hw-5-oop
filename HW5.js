@@ -128,7 +128,8 @@ Salad.OLIVIER = {
   name: "olivier",
 };
 
-Salad.prototype = OrderPosition.prototype;
+Salad.prototype = Object.create(OrderPosition.prototype);
+Salad.prototype.constructor = Salad;
 
 /*
 ----------------- Class Drink -----------------
@@ -149,7 +150,8 @@ Drink.COFFEE = {
   name: "coffee",
 };
 
-Drink.prototype = OrderPosition.prototype;
+Drink.prototype = Object.create(OrderPosition.prototype);
+Drink.prototype.constructor = Drink;
 
 /*
 -----------------  -----------------
